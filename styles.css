@@ -95,7 +95,7 @@ body {
     object-fit: cover;
 }
 
-h1 {
+.nome {
     font-size: 3.5rem;
     color: var(--primaria);
     font-weight: bold;
@@ -264,5 +264,8 @@ h1 {
     }
     .menu-link {
         font-size: 1rem;
+    }
+    .nome{
+        font-size: 3rem;
     }
 }
