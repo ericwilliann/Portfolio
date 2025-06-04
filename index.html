@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Primeiro Portfólio</title>
+</head>
+
+<body>
+
+    <div class="particulas"></div>
+
+    <nav class="navegacao">
+        <ul class="menu">
+            <li><a href="#inicio" class="menu-link">Início</a></li>
+            <li><a href="#sobre" class="menu-link">Sobre</a></li>
+            <li><a href="#projetos" class="menu-link">Projetos</a></li>
+            <li><a href="#contatos" class="menu-link">Contatos</a></li>
+        </ul>
+    </nav>
+
+    <main id="Início" class="cabecalho">
+        <img src="img/EricWillian.png" alt="Foto de Eric Willian" class="foto-perfil">
+        <h1>Eric Willian</h1>
+        <p class="cabecalho-sub-titulo">Estudante de Gestão de Tecnologia da Informação</p>
+    </main>
+
+    <section id="Sobre" class="sobre">
+        <h2 class="sobre-titulo">Sobre Mim</h2>
+        <div class="sobre-caixa">
+            <p class="sobre-paragrafo">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni numquam saepe sed quae repellendus porro
+                praesentium doloribus dolorem eius, quia obcaecati tempore, accusamus beatae? Iusto adipisci illo
+                laboriosam doloremque impedit?
+            </p>
+        </div>
+    </section>
+    <section id="Projetos" class="projetos">
+        <h2 class="projetos-titulo">Meus Projetos</h2>
+        <div class="projetos-caixa">
+
+            <div class="projetos-card">
+                <img src="img/PontoDoce.png" alt="Projeto 1" class="projetos-imagem">
+                <div class="caixa-textos-projetos">
+                    <h3 class="info-titulo">DuDoces</h3>
+                    <p class="paragrafo-projetos">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquam
+                        harum,
+                        nesciunt incidunt cupiditate rerum dicta. Quibusdam deleniti, necessitatibus tempore eaque quasi
+                        voluptatibus, quis odit doloribus modi, eos praesentium at consequuntur.</p>
+                </div>
+            </div>
+
+            <div class="projetos-card">
+                <img src="img/AlptTêxtil.png" alt="Projeto 2" class="projetos-imagem">
+                <div class="caixa-textos-projetos">
+                    <h3 class="info-titulo">AlpTêxtil</h3>
+                    <p class="paragrafo-projetos">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquam
+                        harum,
+                        nesciunt incidunt cupiditate rerum dicta. Quibusdam deleniti, necessitatibus tempore eaque quasi
+                        voluptatibus, quis odit doloribus modi, eos praesentium at consequuntur.</p>
+                </div>
+            </div>
+
+            <div class="projetos-card">
+                <img src="img/PowerBI.png" alt="Projeto 3" class="projetos-imagem">
+                <div class="caixa-textos-projetos">
+                    <h3 class="info-titulo">Power BI</h3>
+                    <p class="paragrafo-projetos">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquam
+                        harum,
+                        nesciunt incidunt cupiditate rerum dicta. Quibusdam deleniti, necessitatibus tempore eaque quasi
+                        voluptatibus, quis odit doloribus modi, eos praesentium at consequuntur.</p>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+    <section id="Contatos" class="contatos">
+        <h2 class="contatos-titulo">Entre em Contato</h2>
+        <form class="formulario-contato" id="formulario" onsubmit="enviarWhats(event)">
+            <div class="grupo-form">
+                <input class="campo-form" placeholder="Nome" id="nome">
+            </div>
+            <div class="grupo-form">
+                <textarea class="campo-form" placeholder="Digite sua Mensagem" rows="4" id="mensagem"></textarea>
+            </div>
+            <button type="submit" class="botao-form">Enviar WhatsApp</button>
+        </form>
+    </section>
+
+    <script>
+        function enviarWhats(event) {
+            event.preventDefault();
+            const nome = document.getElementById('nome').value;
+            const mensagem = document.getElementById('mensagem').value;
+            const telefone = 5512982702521;
+
+            const texto = `Olá Eric Willian, meu nome é ${nome.value} e gostaria de entrar em contato com você. ${mensagem.value}`;
+            const msgFormatada = encodeURIComponent(texto);
+
+            const url = `https://wa.me/${telefone}?text=${msgFormatada}`;
+
+            window.open(url, '_blank');
+        }
+    </script>
+
+
+
+</body>
+
+</html>
