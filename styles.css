@@ -184,6 +184,7 @@ body {
 .paragrafo-projetos {
     color: rgba(226, 232, 240, 0.8);
     line-height: 1.25rem;
+    text-align: left;
 }
 
 .contatos {
@@ -325,7 +326,6 @@ body {
     color: rgba(226, 232, 240, 0.8);
     line-height: 1.4;
     min-height: 3.6rem;
-    text-align: left;
     /* mantém altura uniforme */
 }
 
