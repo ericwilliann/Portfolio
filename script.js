@@ -1,6 +1,16 @@
 function toggleMenu() {
     const menu = document.querySelector('.menu');
+    const icone = document.getElementById('icone-menu');
+
     menu.classList.toggle('show');
+
+    if (menu.classList.contains('show')) {
+        icone.style.transform = "rotate(180deg)";
+        icone.textContent = '✕';
+    } else {
+        icone.style.transform = "rotate(0deg)";
+        icone.textContent = '☰';
+    }
 }
 
 const usuario = "ericwilliann";
