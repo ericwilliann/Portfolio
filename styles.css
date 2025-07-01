@@ -280,13 +280,14 @@ body {
     display: flex;
     flex-direction: column;
     gap: 0.4rem;
+    cursor: pointer;
 }
 
 /* Título com link do repositório */
 .info-titulo {
     font-size: 1.3rem;
     font-weight: 700;
-    color: var(--primaria);
+    color: var(--claro);
     margin-bottom: 0.3rem;
     text-align: center;
 }
@@ -329,11 +330,41 @@ body {
     /* mantém altura uniforme */
 }
 
+.botao-github {
+    color: var(--claro);
+    background-color: var(--primaria);
+
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 8px;
+    max-width: 60%;
+    cursor: pointer;
+    font-weight: bold;
+    width: 100%;
+    transition: all 0.5s ease;
+}
+
+.botao-github:hover {
+    transform: translateY (-4px);
+    box-shadow: 0 5px 15px rgba(79, 70, 229, 0.4);
+}
+
 /* Mensagens de erro ou ausência de repos */
 #repo-list p {
     color: var(--claro);
     text-align: center;
     padding: 1rem 0;
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 2rem;
+    color: var(--claro);
+    position: absolute;
+    top: 1.8rem;
+    right: 2rem;
+    cursor: pointer;
+    z-index: 101;
 }
 
 @keyframes flutuar {
@@ -349,11 +380,49 @@ body {
 }
 
 @media screen and (max-width: 768px) {
+    .navegacao {
+        display: contents;
+        background: none;
+        padding: 0;
+    }
+
+    .menu-toggle {
+        display: block;
+        position: fixed;
+        top: 15px;
+        left: 15px;
+        right: 301px;
+        z-index: 101;
+        background-color: rgba(15, 23, 42, 0.8);
+        padding: 0.5rem 1rem;
+        border-radius: 8px;
+        /*está pronto!!*/
+    }
+
+    .menu.show {
+        max-height: 500px;
+        /* altura máxima do menu aberto */
+        padding: 30px 0;
+        /* reaplica o padding suavemente */
+    }
+
     .menu {
+        max-height: 0;
+        overflow: hidden;
         flex-direction: column;
+        background-color: rgba(15, 23, 42, 0.95);
+        position: fixed;
+        gap: 30px;
         align-items: center;
-        gap: 1rem;
-        display: none;
+        /* fixo no topo da tela */
+        top: 0;
+        left: 0;
+        width: 100%;
+        padding: 0 0;
+        border-top: none;
+        z-index: 100;
+        transition: max-height 0.5s ease, padding 0.5s ease;
+        /* abaixo do toggle */
     }
 
     .menu-link {
@@ -363,54 +432,4 @@ body {
     .nome {
         font-size: 3rem;
     }
-}
-
-.menu-toggle {
-    display: none;
-    font-size: 2rem;
-    color: var(--claro);
-    position: absolute;
-    top: 1.8rem;
-    right: 2rem;
-    cursor: pointer;
-    z-index: 101;
-}
-
-@media screen and (max-width: 768px) {
-    .navegacao {
-        display: contents;
-        background: none;
-        padding: 0;
-    }
-
-    .menu {
-        display: none;
-        flex-direction: column;
-        background-color: rgba(15, 23, 42, 0.95);
-        position: fixed;
-        /* fixo no topo da tela */
-        top: 0;
-        left: 0;
-        width: 100%;
-        padding: 1rem 0;
-        border-top: none;
-        z-index: 100;
-        /* abaixo do toggle */
-    }
-
-    .menu.show {
-        display: flex;
-    }
-
-    .menu-toggle {
-        display: block;
-        position: fixed;
-        top: 1rem;
-        right: 1.5rem;
-        z-index: 101;
-        background-color: rgba(15, 23, 42, 0.8);
-        padding: 0.5rem 1rem;
-        border-radius: 8px;
-    }
-    
 }
