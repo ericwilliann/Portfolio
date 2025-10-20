@@ -26,20 +26,3 @@ O site foi criado como parte do meu aprendizado e evolução em **HTML**, **CSS*
 
 Você pode acessar o site publicado aqui:  
 👉 **[Visualizar Portfólio](https://portfolio-three-sepia-18.vercel.app/)**
-
-> ⚠️ Caso o link não funcione, pode ser que o deploy ainda esteja sendo atualizado.  
-
----
-
-## 🛠️ Como rodar localmente
-
-Se quiser visualizar o projeto na sua máquina:
-
-```bash
-# Clone o repositório
-git clone https://github.com/ericwilliann/Portfolio.git
-
-# Acesse a pasta do projeto
-cd Portfolio
-
-# Abra o arquivo index.html no navegador
